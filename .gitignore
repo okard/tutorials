@@ -1,3 +1,4 @@
+# latex ignores
 *.acn
 *.acr
 *.alg
@@ -30,3 +31,5 @@
 *.vrb
 *.xdy
 *.tdo
+*.pdf
+
