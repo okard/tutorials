@@ -1,0 +1,47 @@
+\documentclass{beamer}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+\usetheme{default}
+\usecolortheme{whale}
+\usefonttheme{professionalfonts}
+
+\definecolor{turquois}{rgb}{0, 0.3, 0.3}
+\definecolor{blue}{rgb}{0, 0.0, 0.8}
+
+\setbeamercolor{title}{bg=turquois}
+\setbeamercolor{frametitle}{bg=turquois}
+
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+
+\hypersetup{colorlinks,linkcolor=gray,urlcolor=blue}
+
+
+\title{Das Internet}
+\author{okard}
+
+\begin{document}
+
+
+%----------------------
+%- Title page
+%----------------------
+\frame{ \titlepage }
+
+%lizenz
+% präsentation / video
+
+
+
+\include{chapter/00_introduction}
+\include{chapter/01_networks}
+\include{chapter/02_everyday_life}
+\include{chapter/03_security}
+
+
+
+
+
+\end{document}
