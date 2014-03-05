@@ -1,4 +1,9 @@
-\documentclass{beamer}
+%
+% executes inkscape to generate pdf from svg
+% requires "--shell-escape" in compile options
+%
+
+\documentclass[aspectratio=169]{beamer}
 
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
@@ -51,7 +56,9 @@
 \begin{frame}
 \begin{figure}
 \centering
-\includegraphics[keepaspectratio=true,width=0.8\paperwidth]{img/CC-BY-NC-SA_Title.pdf}
+%\includesvg[keepaspectratio=true,width=0.8\paperwidth]{img/CC-BY-NC-SA_Title}
+
+\includesvg[0.5]{img/CC-BY-NC-SA_Title}
 \end{figure}
 
 \vspace{3em}
