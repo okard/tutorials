@@ -4,17 +4,28 @@
 % how a computer works
 
 \begin{frame}{Programmieren}{Wie funktioniert ein Computer}
-	Vorab:
-	\begin{itemize}
-	\item Zahlensysteme
-	\end{itemize}	
-	
-	Wie arbeitet ein Computer:
-	\begin{itemize}
-	\item Befehle
-	\item Speicher
-	\item Variablen \& Adressen
-	\end{itemize}
+
+	Um programmieren zu können, ist es ein Riesen vorteil wenn 
+	man versteht wie ein Computer überhaupt funktioniert
+
+ \begin{columns}[t]
+     \begin{column}[T]{5cm} 
+	    Vorab:
+		\begin{itemize}
+		\item Zahlensysteme
+		\item Kern-Komponenten eines Computers
+		\end{itemize}
+     \end{column}
+     \begin{column}[T]{5cm} 
+        Wie arbeitet ein Computer:
+		\begin{itemize}
+		\item Befehle
+		\item Speicher
+		\item Variablen \& Addressen
+		\end{itemize}
+     \end{column}
+     \end{columns}
+     
 \end{frame}
 
 
@@ -22,22 +33,32 @@
 
 \begin{frame}{Programmieren}{Zahlensysteme}
 
+	Was ist ein Zahlensystem
+
 	Wir rechnen im Dezimal System:
 	\begin{itemize}
 	\item 0,1,2,3,4,5,6,7,8,9,10 
 	\item Ab dem Schritt 10  eine Stelle ergänzt(von 9 auf 10) 
 	\item Wiederholt sich
-	\item Zehnersystem
+	\item 10 Zahlen (0-9) also ein Zehnersystem
 	\end{itemize}
 	
+	Das selbe funktioniert auch mit anderen Zahlensystemen zum Beispiel mit einem 3er-System
+	\begin{itemize}
+	\item Es gibt nur die Zahlen 0, 1, 2
+	\item 3 Zahlen also ein 3er System
+	\item 0, 1, 2, 10
+	\item 11, 12, 20
+	\item 21, 22, 30
+	\end{itemize}
 	
-	Das selbe funktioniert auch mit anderen Zahlensystemen zum Beispiel 0-3 
-	0,1,2,3,10,
-	11,12,13,20,
-	21,22,23,30
-	Vierersystem
+	\todo{Übungsaufgaben Zahlensystem? }
 	
 	Warum erzähl ich das?
+	\begin{itemize}
+	\item Computer funktionieren mit einem anderen Zahlensystem
+	\item Binäres Zahlensystem
+	\end{itemize}
 	
 \end{frame}
 
@@ -61,43 +82,336 @@
 
 %binäre zahle 2
 \begin{frame}{Programmieren}{Binäre Zahlendarstellung}
-		1,
-		10101
+
+		Überlegen wir jetzt nochmal wie ein Zahlen system funktioniert:
 		
+		0, 1, 10, 11, 101
+		
+		Eine einzelne 0 oder 1 nennt man \textbf{Bit}
+
+
+		Wieviele \textit{Zahlen} man darstellen kann:
+
+		\begin{tabular}{|l||c|c|}
+		\hline   & Binär & Dezimal \\ 
+		\hline 1 & 0 & 0 \\ 
+		\hline 2 & 1 & 1 \\ 
+		\hline 3 & 10 & 2 \\ 
+		\hline 4 & 11 & 3 \\ 
+		\hline 5 & 100 & 4 \\ 
+		\hline 6 & 101 & 5 \\ 
+		\hline 7 & 110 & 6 \\ 
+		\hline 8 & 110 & 7 \\
+		\hline 
+		\end{tabular} 
+		
+		Schauen wir das an;
+		1 Bit $\rightarrow$ 2 Zahlen (0,1)
+		2 Bit $\rightarrow$ 4 Zahlen (0-3)
+		3 Bit $\rightarrow$ 8 Zahlen ( 0-7)
+		
+
+\end{frame}
+
+\begin{frame}{Programmieren}{Binäre Zahlendarstellung}
+
+		Das sind also immer
+		
+		$2^N$ N = Anzahl der Bits also $ 2^3 \rightarrow 2 * 2 * 2 = 8 $
+		Zweierpotenz
+		
+		Dran denken 0 ist auch eine Zahl
+		
+		$2^8 ( 8 Bit -> 1 Byte) 256 Zahlen ( 0-255)$
+		
+		Namen:
+		
+		1 Bit
+		1 Byte -> (8 Bit)
+		1 KB -> ( 1024 Byte)
+		1 MB -> ( 1024 KB) -> (1048576 Byte)
+		1 GB
+		....
+		
+		1000 vs 1024 
+		1024 ist eine zweier Potenz
+		
+		$2^10$
+		
+		Häufig 2 Potenzen ->
+		
+		32 Bit -> 4 Byte -> $2^2$
+		64 Bit -> 8 Byte -> $2^3$
+		
+%		http://de.wikipedia.org/wiki/Byte#Vergleich
+		
+		\todo{Übungsaufgaben Größe von 32 Bit etc? }
+\end{frame}
+
+
+\begin{frame}{Programmieren}{Binäre Zahlendarstellung}
+
+		Zum umrechnen von Dezimal Zahlen zu Binär-Zahlen und umgekehrt
+	
 		\begin{tabular}{cccccccc|c}
 		128 & 64 & 32 & 16 & 8 & 4 & 2 & 1 & Dezimal \\ \hline 
 		0   & 0  & 0  & 0  & 0 & 0 & 0 & 1 & 1 \\ 
 		0   & 0  & 0  & 1  & 0 & 1 & 0 & 1 & $16 + 4 + 1 = 21$ \\ 
 		\hline 
 		\end{tabular} 	
+		
+		
+		\todo{Übungsaufgaben Umrechnen? }
+		
 \end{frame}
+
+
+
+
+\begin{frame}{Programmieren}{Binäre Zahlendarstellung}
+	Positive und Negative Darstellungen
+	
+	% binäre zahlen + und - darstellung
+
+\end{frame}
+
 
 \begin{frame}[plain]
 	Empty Frame
+	 
+	\begin{block}{This is a Block}
+      This is important information
+   \end{block}
+ 
+   \begin{alertblock}{This is an Alert block}
+   This is an important alert
+   \end{alertblock}
+ 
+   \begin{exampleblock}{This is an Example block}
+   This is an example 
+   \end{exampleblock}
 \end{frame}
 
 
-% binäre zahlen + und -
+\begin{frame}{Programmieren}{Binäre Rechnen}
+	
+	Addition % und Subtraktion
+
+	$0 + 0 = 0$	\\
+	$1 + 0 = 1$	\\
+	$0 + 1 = 1$	\\
+	$1 + 1 = 0 (1 \text{ Übertrag}) \text{ bzw. } 10$	
+	
+	%Schulrechnen:
+	% 19
+	%+11
+	% 1
+	% 30
+	 
+	\begin{tabular}{cccccccc|c}
+		128 & 64 & 32 & 16 & 8 & 4 & 2 & 1 & Dezimal \\ \hline 
+		0   & 0  & 0  & 0  & 1 & 0 & 1 & 1 & $8 + 2 + 1 = 11$ \\ 
+		0   & 0  & 0  & 1  & 0 & 1 & 0 & 1 & $16 + 4 + 1 = 21$ \\ \hline
+		    &    & 1  & 1  & 1 & 1 & 1 &   &  \\
+		0   & 0  & 1  & 0  & 0 & 0 & 0 & 0 & $32$ \\
+		\hline 
+	\end{tabular}
+	 
+	 
+	% binäres rechnen 
+	% https://de.wikipedia.org/wiki/Dualsystem
+	
+	\todo{Bild: Halbaddierer }
+	
+	Subtraktion:
+	Kurz mit negativ darstellung addieren
+	asdasd
+
+\end{frame}
 
 
-% binäres rechnen 
-% https://de.wikipedia.org/wiki/Dualsystem
+\begin{frame}{Programmieren}{Hexadezimal System}
+		
+	Hexadezimal System
 
-% hexadezimal system
-
-% befehle
-
-% speicher (register,cache,ram)
-
-% variablen/informationen
-
-%addressen
+\end{frame}
 
 
 
 
-% Wie funktionieren programmiersprachen?
+\begin{frame}{Aufbau von Computern}{Aufbau von Computern}
+		
+	Es gibt 2 wichtige Komponenten:
+	\begin{itemize}
+	\item Speicher - Speichert Inhalte
+	\item CPU - Erledigt die Arbeit das Arbeitstier
+	\end{itemize}
+	
+	\todo{Bild: Büro Aktenschrank/Schreibtisch/Arbeiter Analogie }
+	\todo{Bild: Block Bild }
+	
+\end{frame}
 
-% wie funktionieren schleifen, verzweigungen, funktionen (parameter)
 
-% Heap & Stack
+\begin{frame}{Aufbau von Computern}{Der Speicher}
+		
+	Der Speicher beinhaltet unterschiedliches:
+	\begin{itemize}
+	\item Zustand der Rechnungen
+	\item Befehle für die CPU
+	\end{itemize}
+	
+	Aufbau und Typen
+	\begin{itemize}
+	\item Register/Cache/Ram/etc
+	\item Zugriff über Addressen
+	\end{itemize}
+	
+	\todo{Bild: Adressen? }
+
+\end{frame}
+
+
+
+
+\begin{frame}{Aufbau von Computern}{Die CPU}
+		
+	Central Processing Unit
+	\begin{itemize}
+	\item Liest Befehle ein und bearbeitet sie
+	\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Aufbau von Computern}{Befehle}
+		
+	Befehle
+	\begin{itemize}
+	\item Geben anweisung was zu tun sein soll
+	\item simpleste 1 + 1 
+	\item Komplexe Dinge werden in einfache zerlegt
+	\end{itemize}
+	
+	Ein Befehl sieht zum Beispiel so aus:
+	0100101010101001110101 
+	
+	Für den Menschen nicht lesbar, deswegen gibt es umschreibungen für menschen
+	
+	\todo{Bild: Binary to Human? }
+	
+	\begin{lstlisting}
+	add 1, 1
+	\end{lstlisting}
+	
+	Hier ist noch das Problem wohin mit dem Ergebnis von 1 + 1
+	was ist wenn man etwas rechnen will wie 1 + 5 / 6 
+	Oder wenn der Benutzer etwas eingeben soll 
+	
+\end{frame}
+
+
+\begin{frame}{Aufbau von Computern}{Variablen}
+
+	Zustände der Berechnungen 
+	Variablen / Register
+	
+\end{frame}
+
+
+\begin{frame}{Aufbau von Computern}{Speicher Teil 2}
+		
+	Speicher Aufteilungen
+	\begin{itemize}
+	\item Heap
+	\item Stack
+	\end{itemize}
+	
+\end{frame}
+
+% jumps
+% vergleiche 
+
+% funktionen -> code im pc , PC register
+
+% assembler darstellung mit labeln 
+
+% ansätze eines assemblers programs?
+% tokenizer -> parser -> code gen?
+
+\begin{frame}{Aufbau von Computern}{In der Realität}
+		
+	Ausblick auf technische Details:
+
+	Befehle - Sprache von CPUs
+	
+	CISC/RISC
+	
+	ARM/MIPS/x86
+	
+\end{frame}
+
+
+\begin{frame}{Aufbau von Computern}{Der ganze PC}
+		
+	Bekannt
+	\begin{itemize}
+	\item Speicher
+	\item CPU
+	\end{itemize}
+	
+	Was sonst:
+	
+	\begin{itemize}
+	\item HDD
+	\item CD/DVD/Blueray/
+	\item Grafik-Karte (Bildschirm)
+	\item Maus/Tastatur
+	\end{itemize}
+	 
+	 Wie redet alles miteinander
+	 Verbindungen: Busse, Mainboard/ South/Northbrige/Sata/PCI Express PCIe/DMA 
+	 	-> Memory Mapping
+	 	\todo{Bild: Memory Mapping -> Schubladen Tausch }
+	 	
+	 
+	 (Mehrere CPUs -> GPUs ...)
+	
+	\todo{Bild: Kompletter PC }
+\end{frame}
+
+
+\begin{frame}{Aufbau von Computern}{Wie etwas auf den Bildschirm kommt}
+	Einfach:
+	
+	
+	\todo{Bild: Schubladen Tausch / Männlein das mit den Akten ein Fester tapeziert }	
+\end{frame}
+
+
+
+\begin{frame}{Aufbau von Computern}{Wo Programme laufen}
+	OS Betriebssystem
+	Container
+	Bibliotheken etc
+	
+	In der Realität läuft der Code in einem speziellem Umfeld.
+	
+	\todo{Bild: OS }	
+\end{frame}
+
+
+\begin{frame}{Aufbau von Computern}{Zeichencodierungen}
+	\todo{Bild: Wo einordnen? }
+	
+	Text vs Value
+	
+	Zeichensätze
+	'1' -> 67
+		
+\end{frame}
+
+
+
+
+% praxis: http://courses.missouristate.edu/kenvollmar/mars/

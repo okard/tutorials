@@ -7,6 +7,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{listings}
 
 \usetheme{default}
 \usecolortheme{whale}
@@ -27,29 +28,17 @@
 \subtitle{Eine Einführung}
 %\author{okard}
 
+\newcommand{\todo}[1]{ \colorbox{yellow}{\textcolor{red}{\textbf{TODO:} {#1}}}\\ }
+
 \begin{document}
 
 \frame{\titlepage}
 
 \include{chapter/00_introduction}
 \include{chapter/01_computer_basics}
+\include{chapter/02_programming_languages}
 
-% wie funktioniert eine programmiersprache
-
-% functions
-% datentypen
-
-% wie etwas auf den bildschirm kommt
-
-% menschliche vs computer sprache
-
-% assembler
-% hochsprachen
-%  interpreter, compiler, 
-% programmiersprachen
-% paradigmen 
-
-% sprachen? folge tutorials
+% Anhang für MIPS mars?
 
 
 \end{document}
